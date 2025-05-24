@@ -1,0 +1,52 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\erayt\\source\\repos\\OnlineKitapMagazasi.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5EB6CBC6-4492-46A5-9754-8FCEBDAB1D65}|..\\OnlineKitapMagazasi.UI\\OnlineKitapMagazasi.UI.csproj|c:\\users\\erayt\\source\\repos\\onlinekitapmagazasi.ui\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5EB6CBC6-4492-46A5-9754-8FCEBDAB1D65}|..\\OnlineKitapMagazasi.UI\\OnlineKitapMagazasi.UI.csproj|c:\\users\\erayt\\source\\repos\\onlinekitapmagazasi.ui\\helpers\\sepethelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\erayt\\source\\repos\\OnlineKitapMagazasi.UI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "..\\OnlineKitapMagazasi.UI\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\erayt\\source\\repos\\OnlineKitapMagazasi.UI\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "..\\OnlineKitapMagazasi.UI\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-24T09:29:55.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SepetHelper.cs",
+              "DocumentMoniker": "C:\\Users\\erayt\\source\\repos\\OnlineKitapMagazasi.UI\\Helpers\\SepetHelper.cs",
+              "RelativeDocumentMoniker": "..\\OnlineKitapMagazasi.UI\\Helpers\\SepetHelper.cs",
+              "ToolTip": "C:\\Users\\erayt\\source\\repos\\OnlineKitapMagazasi.UI\\Helpers\\SepetHelper.cs",
+              "RelativeToolTip": "..\\OnlineKitapMagazasi.UI\\Helpers\\SepetHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-24T09:28:37.893Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

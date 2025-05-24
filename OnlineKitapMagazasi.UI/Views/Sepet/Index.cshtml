@@ -1,0 +1,60 @@
+﻿@model List<OnlineKitapMagazasi.UI.Models.SepetItem>
+
+<h2>Sepetim</h2>
+
+@if (!Model.Any())
+{
+    <p>Sepetiniz boş.</p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Kitap</th>
+                <th>Yazar</th>
+                <th>Fiyat</th>
+                <th>Adet</th>
+                <th>Toplam</th>
+                <th>İşlem</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Baslik</td>
+                    <td>@item.Yazar</td>
+                    <td>₺@item.Fiyat</td>
+                    <td>
+                        <form asp-action="Azalt" method="post" style="display:inline">
+                            <input type="hidden" name="id" value="@item.KitapId" />
+                            <button class="btn btn-sm btn-outline-secondary">-</button>
+                        </form>
+                        <span class="mx-2">@item.Adet</span>
+                        <form asp-action="Arttir" method="post" style="display:inline">
+                            <input type="hidden" name="id" value="@item.KitapId" />
+                            <button class="btn btn-sm btn-outline-secondary">+</button>
+                        </form>
+                    </td>
+                    <td>₺@(item.Fiyat * item.Adet)</td>
+                    <td>
+                        <form asp-action="Sil" method="post">
+                            <input type="hidden" name="id" value="@item.KitapId" />
+                            <button type="submit" class="btn btn-danger btn-sm">Sil</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <div class="text-end">
+        <h4>Toplam: ₺@Model.Sum(x => x.Fiyat * x.Adet)</h4>
+    </div>
+
+    <form asp-action="SatinAl" method="post" class="text-end mt-4">
+        <button type="submit" class="btn btn-success">Satın Al</button>
+    </form>
+
+}

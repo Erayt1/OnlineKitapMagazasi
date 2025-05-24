@@ -1,0 +1,13 @@
+﻿@model OnlineKitapMagazasi.UI.Models.Kullanici
+
+<h2>Giriş Yap</h2>
+<form asp-action="Giris" method="post">
+    <input asp-for="KullaniciAdi" placeholder="Kullanıcı Adı" class="form-control" /><br />
+    <input asp-for="Sifre" placeholder="Şifre" type="password" class="form-control" /><br />
+    <button type="submit" class="btn btn-success">Giriş Yap</button>
+</form>
+
+@if (TempData["mesaj"] != null)
+{
+    <div class="alert alert-info">@TempData["mesaj"]</div>
+}

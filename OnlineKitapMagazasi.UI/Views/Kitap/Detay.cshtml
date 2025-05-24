@@ -1,0 +1,38 @@
+﻿@model OnlineKitapMagazasi.UI.Models.Kitap
+
+
+<h2>@Model.Baslik</h2>
+<p>Yazar: @Model.Yazar</p>
+<p>Fiyat: ₺@Model.Fiyat</p>
+
+<h3>Yorumlar</h3>
+@if (Model.Yorumlar != null && Model.Yorumlar.Any())
+{
+    foreach (var yorum in Model.Yorumlar)
+    {
+        <div class="alert alert-secondary">@yorum.Icerik</div>
+    }
+}
+else
+{
+    <p>Henüz yorum yok.</p>
+}
+
+<hr />
+
+<h4>Yorum Ekle</h4>
+<form asp-action="YorumEkle" method="post">
+    <input type="hidden" name="KitapId" value="@Model.Id" />
+    <textarea name="Icerik" class="form-control" rows="3"></textarea><br />
+    <button type="submit" class="btn btn-success">Yorum Gönder</button>
+</form>
+
+<!-- Sepete Ekle Butonu -->
+<form asp-controller="Sepet" asp-action="SepeteEkle" method="post">
+    <input type="hidden" name="KitapId" value="@Model.Id" />
+    <input type="hidden" name="Baslik" value="@Model.Baslik" />
+    <input type="hidden" name="Yazar" value="@Model.Yazar" />
+    <input type="hidden" name="Fiyat" value="@Model.Fiyat" />
+    <input type="hidden" name="ResimUrl" value="@Model.ResimUrl" />
+    <button type="submit" class="btn btn-primary">Sepete Ekle</button>
+</form>

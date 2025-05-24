@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35312.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineKitapMagazasi.API", "OnlineKitapMagazasi.API.csproj", "{77A24EB0-09D1-4351-9F21-953CD1F0D7EB}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnlineKitapMagazasi.UI", "..\OnlineKitapMagazasi.UI\OnlineKitapMagazasi.UI.csproj", "{5EB6CBC6-4492-46A5-9754-8FCEBDAB1D65}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{77A24EB0-09D1-4351-9F21-953CD1F0D7EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77A24EB0-09D1-4351-9F21-953CD1F0D7EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77A24EB0-09D1-4351-9F21-953CD1F0D7EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77A24EB0-09D1-4351-9F21-953CD1F0D7EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EB6CBC6-4492-46A5-9754-8FCEBDAB1D65}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EB6CBC6-4492-46A5-9754-8FCEBDAB1D65}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EB6CBC6-4492-46A5-9754-8FCEBDAB1D65}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EB6CBC6-4492-46A5-9754-8FCEBDAB1D65}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {05272859-9ECA-4C04-B46F-3E804764E58F}
+	EndGlobalSection
+EndGlobal

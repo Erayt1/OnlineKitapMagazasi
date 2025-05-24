@@ -1,0 +1,59 @@
+﻿@model List<OnlineKitapMagazasi.UI.Models.Kitap>
+@using OnlineKitapMagazasi.UI.Helpers
+
+@{
+    var rol = TokenHelper.GetUserRole(ViewContext.HttpContext);
+}
+
+@if (rol == "admin")
+{
+    <a href="/Kitap/Ekle" class="btn btn-primary mb-3">Yeni Kitap Ekle</a>
+}
+
+<h2>Kitap Listesi</h2>
+
+<form asp-controller="Kitap" asp-action="Index" method="get" class="mb-3">
+    <div class="input-group">
+        <input type="text" name="arama" class="form-control" placeholder="Kitap adı ya da yazar ara..." value="@ViewContext.HttpContext.Request.Query["arama"]" />
+        <button type="submit" class="btn btn-outline-primary">Ara</button>
+    </div>
+</form>
+
+<div class="row">
+    @foreach (var kitap in Model)
+    {
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img src="@kitap.ResimUrl" class="card-img-top" style="height:200px; object-fit:cover;" />
+                <div class="card-body">
+                    <h5 class="card-title">@kitap.Baslik</h5>
+                    <p class="card-text">Yazar: @kitap.Yazar</p>
+                    <p class="card-text">Fiyat: ₺@kitap.Fiyat</p>
+
+                    <form asp-controller="Sepet" asp-action="SepeteEkle" method="post" class="mb-2">
+                        <input type="hidden" name="KitapId" value="@kitap.Id" />
+                        <input type="hidden" name="Baslik" value="@kitap.Baslik" />
+                        <input type="hidden" name="Yazar" value="@kitap.Yazar" />
+                        <input type="hidden" name="Fiyat" value="@kitap.Fiyat" />
+                        <input type="hidden" name="ResimUrl" value="@kitap.ResimUrl" />
+                        <button type="submit" class="btn btn-success w-100">Sepete Ekle</button>
+                    </form>
+
+                    @if (rol == "admin")
+                    {
+                        <form asp-controller="Kitap" asp-action="Sil" method="post">
+                            <input type="hidden" name="id" value="@kitap.Id" />
+                            <button type="submit" class="btn btn-danger w-100">Sil</button>
+                        </form>
+
+                        <form asp-controller="Kitap" asp-action="Duzenle" method="get">
+                            <input type="hidden" name="id" value="@kitap.Id" />
+                            <button type="submit" class="btn btn-warning w-100 mt-2">Düzenle</button>
+                        </form>
+
+                    }
+                </div>
+            </div>
+        </div>
+    }
+</div>

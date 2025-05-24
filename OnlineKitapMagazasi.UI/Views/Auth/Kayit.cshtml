@@ -1,0 +1,9 @@
+﻿@model OnlineKitapMagazasi.UI.Models.Kullanici
+
+<h2>Kayıt Ol</h2>
+<form asp-action="Kayit" method="post">
+    <input asp-for="KullaniciAdi" placeholder="Kullanıcı Adı" class="form-control" /><br />
+    <input asp-for="Email" placeholder="E-posta" class="form-control" /><br />
+    <input asp-for="Sifre" placeholder="Şifre" type="password" class="form-control" /><br />
+    <button type="submit" class="btn btn-primary">Kayıt Ol</button>
+</form>
